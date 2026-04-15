@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- HERO -->
+<section id="overview" class="hero">
+    <div class="container hero-grid">
+        <div class="hero-left">
+            <h1>Detection of Diabetic Retinopathy using DenseNet-121</h1>
+            <p>
+                Diabetic Retinopathy (DR) is a serious eye disease caused by diabetes.
+                Early detection is important to prevent permanent vision loss.
+            </p>
+            <p>
+                This system uses the DenseNet-121 deep learning model to analyze retinal images
+                and classify them into five stages of Diabetic Retinopathy.
+                It helps support early diagnosis and better patient care.
+            </p>
+
+
+            <a href="#upload" class="btn-primary">Upload Retina Image</a>
+        </div>
+
+        <div class="hero-right">
+            <img src="{{ url_for('static', filename='images/DRD.jpg') }}" alt="DR Image">
+        </div>
+    </div>
+</section>
+
+<!-- DR STAGES SECTION -->
+<section id="dr-stages" class="section dr-section">
+    <div class="container center">
+
+        <h2 style="margin-bottom:20px;">Understanding DR Stages</h2>
+        <p style="max-width:800px; margin:0 auto 50px auto;">
+            The system allows users to upload retina images through a simple interface,
+            and it processes them to classify the condition into one of five stages
+            based on the severity of Diabetic Retinopathy.
+        </p>
+
+        <div class="stages-grid">
+
+            <div class="stage-card stage-no">
+                <div class="stage-badge">No DR</div>
+                <p>No signs of Diabetic Retinopathy detected. The retina appears healthy with normal blood vessels.</p>
+            </div>
+
+            <div class="stage-card stage-mild">
+                <div class="stage-badge">Mild</div>
+                <p>Minor microaneurysms present. Early-stage DR with minimal retinal changes.</p>
+            </div>
+
+            <div class="stage-card stage-moderate">
+                <div class="stage-badge">Moderate</div>
+                <p>More pronounced retinal changes including hemorrhages and lipid deposits.</p>
+            </div>
+
+            <div class="stage-card stage-severe">
+                <div class="stage-badge">Severe</div>
+                <p>Significant retinal damage with extensive hemorrhages and venous beading.</p>
+            </div>
+
+            <div class="stage-card stage-proliferative">
+                <div class="stage-badge">Proliferative</div>
+                <p>Advanced stage with new blood vessel growth and risk of vitreous hemorrhage.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- UPLOAD SECTION -->
+<section id="upload" class="section">
+    <div class="container center">
+        <h2>Upload Retina Image for DR Detection</h2>
+        <p>Select a retinal image to analyze using DenseNet-121.</p>
+
+        <div class="upload-card">
+
+            <!-- Hidden File Input -->
+            <input type="file" id="imageInput" accept="image/*" hidden>
+
+            <!-- Click Area -->
+            <div class="drop-zone" id="dropZone">
+                <p id="dropText">Click or Drop Image Here</p>
+                <img id="preview">
+            </div>
+
+            <!-- Button -->
+            <div class="button-group">
+                <button type="button" id="analyzeBtn" class="analyze-btn">
+                    Analyze with DenseNet-121
+                </button>
+                <button type="button" id="clearBtn" class="clear-btn">
+                    Clear Image
+                </button>
+            </div>
+
+
+        </div>
+
+        <!-- Result -->
+        <div id="resultCard" class="result-card"></div>
+
+    </div>
+</section>
+<!-- HOW IT WORKS -->
+<section id="how" class="section dark">
+    <div class="container center">
+        <h2 style="margin-bottom: 50px;">How It Works</h2>
+
+        <div class="how-grid">
+
+            <div class="how-card">
+                <div class="step-number">1</div>
+                <h3>Upload Retina Image</h3>
+                <p>Select and upload a retinal image from your device.</p>
+            </div>
+
+            <div class="how-card">
+                <div class="step-number">2</div>
+                <h3>Real-time Processing</h3>
+                <p>Image processing and recognition using DenseNet-121.</p>
+            </div>
+
+            <div class="how-card">
+                <div class="step-number">3</div>
+                <h3>Classification</h3>
+                <p>Classification into one of five DR stages.</p>
+            </div>
+
+            <div class="how-card">
+                <div class="step-number">4</div>
+                <h3>Results & Recommendations</h3>
+                <p>Receive diagnostic report and medical guidance.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

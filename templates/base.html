@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DRD-121 | Detection of Diabetic Retinopathy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container">
+        <h2 class="logo">Early Detection of Diabetic Retinopathy</h2>
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#dr-stages">DR Stages</a>
+            <a href="#upload">Upload & Detect</a>
+            <a href="#how">How It Works</a>
+        </nav>
+    </div>
+</header>
+
+{% block content %}{% endblock %}
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 Detection of Diabetic Retinopathy | DenseNet-121</p>
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

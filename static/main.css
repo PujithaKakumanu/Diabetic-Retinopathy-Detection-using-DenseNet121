@@ -1,0 +1,341 @@
+/* =========================================
+   GLOBAL STYLING
+========================================= */
+
+body {
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    background: #f4f8fb;
+    color: #1a1f35;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 110px 0;
+}
+
+.center {
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    background: rgba(12, 22, 45, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #00c8e8;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.navbar a {
+    color: #ffffffcc;
+    margin-left: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00c8e8;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    background: linear-gradient(135deg, #0f1c3f, #1e3d6b);
+    color: white;
+    padding: 140px 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 44px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.hero img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 32px;
+    background: #00c8e8;
+    color: #0f1c3f;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #00b0cc;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   UPLOAD CARD
+========================================= */
+
+.upload-card {
+    margin-top: 50px;
+    background: white;
+    padding: 55px;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+}
+
+.drop-zone {
+    border: 2px dashed #00c8e8;
+    padding: 70px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-zone:hover {
+    background: #eefaff;
+}
+
+.drop-zone img {
+    max-width: 280px;
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.button-group{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+
+.analyze-btn{
+    padding:14px 32px;
+    border:none;
+    background:linear-gradient(135deg,#00c8e8,#00aacc);
+    color:white;
+    font-weight:600;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.analyze-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(0,200,232,0.4);
+}
+
+.clear-btn{
+    padding:14px 32px;
+    border:none;
+    background:#e53935;
+    color:white;
+    font-weight:600;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.clear-btn:hover{
+    background:#c62828;
+    transform:translateY(-2px);
+}
+
+/* =========================================
+   RESULT CARD
+========================================= */
+
+.result-card {
+    margin-top: 60px;
+    padding: 45px;
+    border-radius: 20px;
+    display: none;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.result-success {
+    background: #eafaf1;
+    border-left: 6px solid #2e7d32;
+}
+
+.result-warning {
+    background: #fff8e6;
+    border-left: 6px solid #ff9800;
+}
+
+.result-danger {
+    background: #ffeaea;
+    border-left: 6px solid #c62828;
+}
+
+.result-card h3 {
+    font-size: 26px;
+}
+
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.dark {
+    background: linear-gradient(135deg, #0f1c3f, #1b2d50);
+    color: white;
+}
+
+.how-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+}
+
+.how-card {
+    background: white;
+    color: #1a1f35;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.how-card:hover {
+    transform: translateY(-6px);
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    background: #00c8e8;
+    color: #0f1c3f;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   DR STAGES
+========================================= */
+
+.dr-section {
+    background: linear-gradient(to right, #eef6fb, #f9fcff);
+}
+
+.stages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 35px;
+}
+
+.stage-card {
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+    transition: 0.3s ease;
+}
+
+.stage-card:hover {
+    transform: translateY(-6px);
+}
+
+.stage-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Stage Colors */
+
+.stage-no {
+    background: #eafaf1;
+    border-left: 6px solid #2e7d32;
+}
+
+.stage-mild {
+    background: #fff8e6;
+    border-left: 6px solid #fbc02d;
+}
+
+.stage-moderate {
+    background: #fff3e0;
+    border-left: 6px solid #fb8c00;
+}
+
+.stage-severe {
+    background: #ffeaea;
+    border-left: 6px solid #e53935;
+}
+
+.stage-proliferative {
+    background: #ffe4e4;
+    border-left: 6px solid #b71c1c;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #0f1c3f;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 14px;
+}
