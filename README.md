@@ -2,27 +2,49 @@
 
 ## 📌 Overview  
 
-DRD-121 is a **Deep Learning-based Web Application** that detects **Diabetic Retinopathy (DR)** from retinal images.  
+This project is a Deep Learning-based web application that detects the severity of Diabetic Retinopathy (DR) from retinal fundus images.
+It uses a DenseNet121 Convolutional Neural Network (CNN) to classify images into different stages of DR and provides predictions through a simple web interface built with Flask.
 
 It helps in:  
 ✔ Early disease detection  
 ✔ Faster medical screening  
-✔ Supporting healthcare professionals  
+✔ Supporting healthcare professionals
 
-
-## 🚀 Demo  
-
-<p align="center">
-  <img src="assets/demo.gif" alt="Demo GIF" width="600"/>
-</p>
-
-
-## 🖥️ UI Preview  
+## 🔄 Methodology
 
 <p align="center">
-  <img src="assets/home.png" width="45%" />
-  <img src="assets/result.png" width="45%" />
+  <img src="static/Images/methodology.png" width="700">
 </p>
+
+---
+
+## ⚙️ System Workflow
+
+<p align="center">
+  <img src="static/Images/workflow.png" width="700">
+</p>
+
+---
+
+## 🏥 DR Severity Stages
+
+<p align="center">
+  <img src="static/Images/stages.png" width="700">
+</p>
+
+---
+
+## 🖥️ UI Preview
+
+<p align="center">
+  <img src="static/Images/Overview.png" width="45%" />
+  <img src="static/Images/DR stages.png" width="45%" />
+  <br><br>
+  <img src="static/Images/Results.png" width="45%" />
+  <img src="static/Images/how.png" width="45%" />
+</p>
+
+---
 
 ## 🎯 Features  
 - Upload retinal image  
@@ -38,6 +60,7 @@ It helps in:
 - Output: **5 Classes Classification**  
 
 ### 🏥 DR Severity Levels:
+
 | Class | Description |
 |------|------------|
 | 0 | No DR |
@@ -61,16 +84,9 @@ It helps in:
 ## 📂 Project Structure  
 
 ```
-DRD-121/
-│
-└── Diabetic_Retinopathy_Detection/
+    Diabetic_Retinopathy_Detection/
     │
     ├── models/
-    │   ├── __pycache__/
-    │   ├── pretrained/
-    │   │   ├── DenseNet-BC-121-32-no-top.h5   # Base DenseNet weights
-    │   │   ├── model.h5                      # Trained DR model weights
-    │   │   └── model.json                    # Model architecture (optional)
     │   └── model.py                          # Model building & preprocessing
     │
     ├── static/
@@ -87,6 +103,17 @@ DRD-121/
     └── requirements.txt                      # Dependencies
 ```
 
+## ⚠️ Important Note
+
+Due to GitHub size limits, **model files (.h5)** are not included.
+
+👉 Download model files from: *(https://drive.google.com/drive/folders/13JP1M8i-tHUwhnJvgtgdE7mLgf-gFbhw?usp=drive_link)*
+
+👉 Place inside:
+
+```
+models/pretrained/
+```
 
 ## 🔄 Workflow  
 
@@ -95,22 +122,60 @@ User Upload Image → Preprocessing → Model Prediction → Result Display
 ```
 
 
-## 🛠️ Installation  
+## 🚀 How to Run the Project
+
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/PujithaKakumanu/Diabetic-Retinopathy-Detection-using-DenseNet121.git
-cd DRD-121
+cd Diabetic_Retinopathy_Detection
+```
+
+---
+
+### 2️⃣ Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+#### ▶ Activate Environment
+
+**For Windows:**
+
+```bash
+venv\Scripts\activate
+```
+
+**For Mac/Linux:**
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+### 3️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-## ▶️ Run Locally  
+---
+
+### 4️⃣ Run the Application
 
 ```bash
 python app.py
 ```
 
-🔗 Open: http://localhost:5000  
+---
 
+### 5️⃣ Open in Browser
+
+```bash
+http://localhost:5000
+```
 
 ## 📸 Input Requirements  
 
@@ -144,12 +209,6 @@ Confidence: 0.87
 **Pujitha Kakumanu**  
 
 
-## 💡 Contribution  
+## ⭐ Support
 
-Contributions are welcome!  
-Feel free to fork, improve, and submit a Pull Request(PR)  
-
-
-
-
-
+If you like this project, please ⭐ star the repository!
